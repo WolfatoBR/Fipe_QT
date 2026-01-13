@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1054</width>
+    <height>749</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(128, 128, 128);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>40</y>
+      <width>151</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>API Tabela FIPE</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>2</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>241</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="2" column="0">
+      <widget class="QPushButton" name="buttonBrands">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 85, 255);</string>
+       </property>
+       <property name="text">
+        <string>Executar</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QComboBox" name="comboBox">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(57, 57, 57);</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>cars</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>motorcycles</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>trucks</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::Box</enum>
+       </property>
+       <property name="text">
+        <string>Lista todas as marcas por tipo de veiculo</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>241</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="3" column="0">
+      <widget class="QLineEdit" name="codeBrands">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(57, 57, 57);</string>
+       </property>
+       <property name="placeholderText">
+        <string>Digite aqui o codigo da MARCA</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QComboBox" name="comboBox_2">
+       <property name="styleSheet">
+        <string notr="true">
+background-color: rgb(57, 57, 57);
+</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>cars</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>motorcycles</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>trucks</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="buttonModels">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 85, 255);</string>
+       </property>
+       <property name="text">
+        <string>Executar</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::Box</enum>
+       </property>
+       <property name="text">
+        <string>Lista todos os modelos da marca especifica</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>241</width>
+      <height>138</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="3" column="0">
+      <widget class="QLineEdit" name="codeBrands_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(57, 57, 57);</string>
+       </property>
+       <property name="placeholderText">
+        <string>Digite aqui o codigo da MARCA</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QComboBox" name="comboBox_3">
+       <property name="styleSheet">
+        <string notr="true">
+background-color: rgb(57, 57, 57);
+</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>cars</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>motorcycles</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>trucks</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLineEdit" name="codeModels">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(57, 57, 57);</string>
+       </property>
+       <property name="placeholderText">
+        <string>Digite aqui o codigo do MODELO</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QPushButton" name="buttonYears">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 85, 255);</string>
+       </property>
+       <property name="text">
+        <string>Executar</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::Box</enum>
+       </property>
+       <property name="text">
+        <string>Lista os anos para o modelo especifico</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>460</y>
+      <width>241</width>
+      <height>166</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="3" column="0">
+      <widget class="QLineEdit" name="codeBrands_3">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(57, 57, 57);</string>
+       </property>
+       <property name="placeholderText">
+        <string>Digite aqui o codigo da MARCA</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLineEdit" name="codeModels_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(57, 57, 57);</string>
+       </property>
+       <property name="placeholderText">
+        <string>Digite aqui o codigo do MODELO</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLineEdit" name="codeYears">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(57, 57, 57);</string>
+       </property>
+       <property name="placeholderText">
+        <string>Digite aqui o codigo do ANO</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QComboBox" name="comboBox_4">
+       <property name="styleSheet">
+        <string notr="true">
+background-color: rgb(57, 57, 57);
+</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>cars</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>motorcycles</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>trucks</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QPushButton" name="buttonPrice">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 85, 255);</string>
+       </property>
+       <property name="text">
+        <string>Executar</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::Box</enum>
+       </property>
+       <property name="text">
+        <string>Exibe Todas as informações do veiculo</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>60</y>
+      <width>661</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_6">
+     <item row="0" column="0">
+      <widget class="QListWidget" name="listWidget">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
