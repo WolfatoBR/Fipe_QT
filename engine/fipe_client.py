@@ -1,13 +1,3 @@
-"""
-================================================================================
-Aqui é o "cliente" que conversa com a API externa da FIPE.
-Sua única responsabilidade é fazer as requisições web (HTTP) para os
-endpoints corretos da API v2 e retornar os dados (ou um erro).
-
-Ele é o "motor" da nossa aplicação.
-================================================================================
-"""
-
 import httpx
 # biblioteca moderna para fazer requisições web ,usamos porque ela suporta `async`
 
