@@ -1,12 +1,11 @@
+# Poderia usar a biblioteca *requests*
 import httpx
-# biblioteca moderna para fazer requisições web ,usamos porque ela suporta `async`
 
 BASE_URL = "https://fipe.parallelum.com.br/api/v2"
 
 
 def get_brands(vehicle_type: str):
     """Busca todas as marcas de um tipo de veículo"""
-    # Usando httpx.Client() em vez de AsyncClient()
     with httpx.Client() as client:
         try:
             response = client.get(f"{BASE_URL}/{vehicle_type}/brands")
