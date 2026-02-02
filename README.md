@@ -13,7 +13,7 @@ O aplicativo permite realizar o fluxo completo de consulta da FIPE:
 
 1. **Consultar Marcas:** Lista todas as marcas para Carros, Motos ou Caminhões.
 2. **Consultar Modelos:** Exibe os modelos disponíveis de uma marca específica.
-3. **Consultar Anos:** Mostra os anos de fabricação disponíveis para um modelo.
+3. **Consultar Anos:** Mostra os anos de fabricação disponíveis do modelo.
 4. **Ver Preço:** Exibe a ficha técnica completa (Preço, Mês de Referência, Código Fipe, Combustível, etc).
 
 ---
@@ -32,7 +32,7 @@ O aplicativo permite realizar o fluxo completo de consulta da FIPE:
 Para que o projeto funcione corretamente, organize os arquivos da seguinte maneira em seu computador:
 
 ```text
-projeto-fipe/
+FIPE_QT/
 │
 ├── app.py                  # Arquivo Principal (Execute este arquivo)
 ├── requirements.txt        # Lista de dependências
@@ -100,7 +100,7 @@ O aplicativo funciona através de **Códigos**. O fluxo de uso é:
 
 1. **Buscar Marca:**
 * Selecione o tipo (Carro/Moto/Caminhão) e clique em "Executar".
-* Copie o **Código** da marca desejada que aparecerá na lista à direita.
+* Copie o **Código** da marca desejada que ira ser exibido na lista à direita.
 
 
 2. **Buscar Modelo:**
