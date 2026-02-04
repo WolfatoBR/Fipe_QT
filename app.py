@@ -87,7 +87,7 @@ class FipeApp(QMainWindow, Ui_MainWindow):
             result = fipe_client.get_years(vehicle_type, int(brand_id), int(model_id))
 
             if isinstance(result, list) and len(result) > 0:
-                list_format = [f'{i['name']} (Cód: {i['code']})' for i in result]
+                list_format = [f"{i['name']} (Cód: {i['code']})" for i in result]
                 self.list_att("Anos encontrados", list_format)
             elif "error" in result:
                 self.list_att("ERRO", [result['message']])
