@@ -18,6 +18,26 @@ class FipeApp(QMainWindow, Ui_MainWindow):
         self.listWidget.clear()
         self.listWidget.addItem(f" --- {title} --- ")
         self.listWidget.addItems(items)
+
+    def search_verification(self, message_load, title, function, *args):
+        try:
+            self.listWidget.clear()
+            self.listWidget.addItem(message_load)
+            QApplication.processEvents()
+
+            #usando oq aprendi no curso de python kkkk
+            result = function(*args)
+                
+                # nesse trecho realizo uma verificação : se o resultado é uma lista
+            if isinstance(result, list) and len(result) > 0:
+                list_format = [f"{i['name']} (Cod: {i['code']})" for i in result]
+                self.list_att(title, list_format)
+            elif "error" in result:
+                self.list_att("ERRO", [result['message']])
+            else:
+                self.list_att('Aviso', ["Nenhum resultado."])
+        except Exception as e:
+            QMessageBox.critical(self, 'Erro', str(e))
     
     def listBrands(self):
         vehicle_type = self.vehicle_brands.currentText()
@@ -26,23 +46,7 @@ class FipeApp(QMainWindow, Ui_MainWindow):
             QMessageBox.warning(self, "Atenção", "Escolha o tipo")
             return
 
-        try:
-            self.listWidget.clear()
-            self.listWidget.addItem("Buscando tipos...")
-            QApplication.processEvents()
-
-            result = fipe_client.get_brands(vehicle_type)
-                
-                # nesse trecho realizo uma verificação : se o resultado é uma lista
-            if isinstance(result, list) and len(result) > 0:
-                list_format = [f"{i['name']} (Cod: {i['code']})" for i in result]
-                self.list_att("Marcas encontradas", list_format)
-            elif "error" in result:
-                self.list_att("ERRO", [result['message']])
-            else:
-                self.list_att('Aviso', ["Nenhum resultado."])
-        except Exception as e:
-            QMessageBox.critical(self, 'Erro', str(e))
+        self.search_verification("Buscando tipos...", "Marcas encontradas", fipe_client.get_brands, vehicle_type)
 
     def listModels(self):
         vehicle_type = self.vehicle_models.currentText()
@@ -52,22 +56,7 @@ class FipeApp(QMainWindow, Ui_MainWindow):
             QMessageBox.warning(self, "Atenção", "Preencha os campos.")
             return
         
-        try:
-            self.listWidget.clear()
-            self.listWidget.addItem("Buscando modelos.")
-            QApplication.processEvents()
-
-            result = fipe_client.get_models(vehicle_type, int(brand_id))
-
-            if isinstance(result, list) and len(result) > 0:
-                list_format = [f"{i['name']} (Cod: {i['code']})" for i in result]
-                self.list_att("Modelos encontrados", list_format)
-            elif "error" in result:
-                self.list_att("ERRO", [result['message']])
-            else:
-                self.list_att('Aviso', ["Nenhum resultado."])
-        except Exception as e:
-            QMessageBox.critical(self, 'Erro', str(e))
+        self.search_verification("Buscando Modelos...", 'Modelos Encontrados', fipe_client.get_models, vehicle_type, brand_id)
 
     def listYears(self):
         vehicle_type = self.vehicle_years.currentText()
@@ -79,23 +68,7 @@ class FipeApp(QMainWindow, Ui_MainWindow):
             QMessageBox.warning(self, "Atenção", "Preencha o codigo da Marca e do Modelo")
             return
         
-        try:
-            self.listWidget.clear()
-            self.listWidget.addItem("Buscando anos...")
-            QApplication.processEvents()
-
-            result = fipe_client.get_years(vehicle_type, int(brand_id), int(model_id))
-
-            if isinstance(result, list) and len(result) > 0:
-                list_format = [f"{i['name']} (Cód: {i['code']})" for i in result]
-                self.list_att("Anos encontrados", list_format)
-            elif "error" in result:
-                self.list_att("ERRO", [result['message']])
-            else:
-                self.list_att("Aviso", ["Nenhum resultado encontrado"])
-            
-        except Exception as e:
-            QMessageBox.critical(self, "Erro", str(e))
+        self.search_verification('Buscando Anos', "Anos Encontrados", fipe_client.get_years, vehicle_type, brand_id, model_id)
     
     def listPrice(self):
         vehicle_type = self.vehicle_price.currentText()
