@@ -20,7 +20,7 @@ class FipeApp(QMainWindow, Ui_MainWindow):
         self.listWidget.addItems(items)
     
     def listBrands(self):
-        vehicle_type = self.comboBox.currentText()
+        vehicle_type = self.vehicle_brands.currentText()
 
         if not vehicle_type:
             QMessageBox.warning(self, "Atenção", "Escolha o tipo")
@@ -45,7 +45,7 @@ class FipeApp(QMainWindow, Ui_MainWindow):
             QMessageBox.critical(self, 'Erro', str(e))
 
     def listModels(self):
-        vehicle_type = self.comboBox_2.currentText()
+        vehicle_type = self.vehicle_models.currentText()
         brand_id = self.codeBrands.text()
 
         if not (vehicle_type and brand_id):
@@ -70,9 +70,9 @@ class FipeApp(QMainWindow, Ui_MainWindow):
             QMessageBox.critical(self, 'Erro', str(e))
 
     def listYears(self):
-        vehicle_type = self.comboBox_3.currentText()
+        vehicle_type = self.vehicle_years.currentText()
 
-        brand_id = self.codeBrands_2.text()
+        brand_id = self.codeBrands_model.text()
         model_id = self.codeModels.text()
 
         if not (brand_id and model_id):
@@ -98,9 +98,9 @@ class FipeApp(QMainWindow, Ui_MainWindow):
             QMessageBox.critical(self, "Erro", str(e))
     
     def listPrice(self):
-        vehicle_type = self.comboBox_4.currentText()
-        brand_id = self.codeBrands_3.text()
-        model_id =  self.codeModels_2.text()
+        vehicle_type = self.vehicle_price.currentText()
+        brand_id = self.codeBrands_price.text()
+        model_id =  self.codeModels_price.text()
         year_id = self.codeYears.text()
 
         if not (brand_id and model_id and year_id):

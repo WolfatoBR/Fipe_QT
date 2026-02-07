@@ -71,7 +71,7 @@
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="vehicle_brands">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(57, 57, 57);</string>
        </property>
@@ -128,7 +128,7 @@
       </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QComboBox" name="comboBox_2">
+      <widget class="QComboBox" name="vehicle_models">
        <property name="styleSheet">
         <string notr="true">
 background-color: rgb(57, 57, 57);
@@ -187,7 +187,7 @@ background-color: rgb(57, 57, 57);
     </property>
     <layout class="QGridLayout" name="gridLayout_4">
      <item row="3" column="0">
-      <widget class="QLineEdit" name="codeBrands_2">
+      <widget class="QLineEdit" name="codeBrands_model">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(57, 57, 57);</string>
        </property>
@@ -197,7 +197,7 @@ background-color: rgb(57, 57, 57);
       </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QComboBox" name="comboBox_3">
+      <widget class="QComboBox" name="vehicle_years">
        <property name="styleSheet">
         <string notr="true">
 background-color: rgb(57, 57, 57);
@@ -266,7 +266,7 @@ background-color: rgb(57, 57, 57);
     </property>
     <layout class="QGridLayout" name="gridLayout_5">
      <item row="3" column="0">
-      <widget class="QLineEdit" name="codeBrands_3">
+      <widget class="QLineEdit" name="codeBrands_price">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(57, 57, 57);</string>
        </property>
@@ -276,7 +276,7 @@ background-color: rgb(57, 57, 57);
       </widget>
      </item>
      <item row="5" column="0">
-      <widget class="QLineEdit" name="codeModels_2">
+      <widget class="QLineEdit" name="codeModels_price">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(57, 57, 57);</string>
        </property>
@@ -296,7 +296,7 @@ background-color: rgb(57, 57, 57);
       </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QComboBox" name="comboBox_4">
+      <widget class="QComboBox" name="vehicle_price">
        <property name="styleSheet">
         <string notr="true">
 background-color: rgb(57, 57, 57);
